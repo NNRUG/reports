@@ -1,0 +1,21 @@
+<div class="ui message">
+  <h1 class="ui header">
+    <div class="content">
+      {{title}}
+      <div class="sub header">by {{author}}</div>
+    </div>
+  </h1>
+  <p>
+    {{description}}
+  </p>
+</div>
+
+<div class="ui piled blue segment">
+  <h2 class="ui header">
+    <i class="icon inverted circular blue comment"></i> Комментарии
+  </h2>
+  <div class="ui comments">
+    {{render "comments.index"}}
+    {{render "comments.new" model}}
+  </div>
+</div>

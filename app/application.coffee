@@ -1,0 +1,1 @@
+Grug = Ember.Application.create()

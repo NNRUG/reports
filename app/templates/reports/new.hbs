@@ -1,0 +1,45 @@
+<div class="ui form">
+  <div class="inline field">
+    <div class="ui checkbox">
+      {{input type="checkbox" checked=needAuthor}}
+      <label>Ищется автор</label>
+    </div>
+  </div>
+  <script>
+  //Ну простите
+  $('.ui.checkbox')
+  .checkbox()
+  </script>
+  {{#unless needAuthor}}
+    <div class="field">
+      <label>Представьтесь пожалуйста</label>
+      <div class="ui left labeled icon input">
+        {{input type="text" value=author placeholder="Имя"}}
+        <i class="user icon"></i>
+        <div class="ui corner label">
+          <i class="icon asterisk"></i>
+        </div>
+      </div>
+    </div>
+  {{/unless}}
+
+  <div class="field">
+    <label>О чем ваш доклад</label>
+    <div class="ui left labeled icon input">
+      {{input type="text" value=title placeholder="Название доклада"}}
+      <i class="font icon"></i>
+      <div class="ui corner label">
+        <i class="icon asterisk"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="field">
+    <label>Короткое описание, если есть</label>
+    <div class="ui left labeled icon input">
+      {{textarea value=description placeholder="Описание"}}
+    </div>
+  </div>
+
+  <div class="ui blue submit button" {{action "create"}}>Создать</div>
+</div>

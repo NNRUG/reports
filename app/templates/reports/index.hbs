@@ -1,0 +1,8 @@
+{{#each report in arrangedContent}}
+  <div class="ui segment">
+    <b>{{report.author}}</b>
+      {{#link-to "reports.show" report}}
+        {{report.title}}
+      {{/link-to}}
+  </div>
+{{/each}}
