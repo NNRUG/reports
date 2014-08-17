@@ -15,9 +15,11 @@
   "devDependencies": {
     "coffee-script": "^1.7.1",
     "gulp": "^3.8.7",
+    "gulp-auto-emblem": "^0.1.3",
     "gulp-coffee": "^2.1.1",
     "gulp-concat": "^2.3.4",
     "gulp-ember-handlebars": "^0.6.0",
+    "gulp-if": "^1.2.4",
     "gulp-notify": "^1.4.2",
     "gulp-plumber": "^0.6.4",
     "gulp-serve": "^0.2.0"

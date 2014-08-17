@@ -2,9 +2,11 @@ gulp = require "gulp"
 coffee = require "gulp-coffee"
 concat =  require "gulp-concat"
 handlebars = require "gulp-ember-handlebars"
+emblem = require "gulp-auto-emblem"
 serve = require "gulp-serve"
 plumber = require "gulp-plumber"
 notify = require "gulp-notify"
+gulpif = require "gulp-if"
 
 plumberCfg = errorHandler: (error) ->
   console.log error
@@ -24,7 +26,9 @@ paths =
   templates:
     src: [
       "./app/templates/**/*.hbs"
+      "./app/templates/**/*.emblem"
     ]
+    root: "./app/templates"
     dest: "./dist"
     filename: "templates.js"
   html:
@@ -41,7 +45,8 @@ gulp.task "scripts", ->
 gulp.task "templates", ->
   gulp.src paths.templates.src
   .pipe plumber plumberCfg
-  .pipe handlebars outputType: "browser"
+  .pipe gulpif("**/*.hbs", handlebars outputType: "browser")
+  .pipe gulpif("**/*.emblem", emblem(rootPath: paths.templates.root))
   .pipe concat paths.templates.filename
   .pipe gulp.dest paths.templates.dest
 
