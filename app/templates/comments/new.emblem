@@ -1,0 +1,6 @@
+form.ui.reply.form
+  .field: textarea value=body placeholder="Мое особое мнение по этому поводу"
+
+  .ui.fluid.blue.labeled.submit.icon.button{action "send"}
+    i.icon.edit
+    | Отправить

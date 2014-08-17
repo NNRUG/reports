@@ -1,6 +1,0 @@
-{{#if Grug.Session.authed}}
-  <b class="item">{{Grug.Session.user.displayName}}</b>
-{{/if}}
-{{#unless Grug.Session.authed}}
-  <a {{action "login"}} class="item">login</a>
-{{/unless}}

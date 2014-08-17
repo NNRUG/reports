@@ -1,0 +1,13 @@
+.ui.message
+  h1.ui.header: .content
+    = title
+    .sub.header by {{author}}
+  p = description
+
+.ui.piled.blue.segment
+  h2.ui.header
+    i.icon.inverted.circular.blue.comment
+    | Комментарии
+  .ui.comments
+    render "comments.index"
+    render "comments.new" model
