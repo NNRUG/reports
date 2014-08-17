@@ -13,7 +13,7 @@ Grug.initializer
         @set "authed", false
         @set "user", null
       onUserChange: (->
-        console.log "user changed"
+        uid = @get("user").get("uid")
       ).observes("user")
     .create()
 
