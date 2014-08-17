@@ -1,0 +1,6 @@
+each report in arrangedContent
+  .ui.segment
+    b = report.author
+    | &nbsp;
+    link-to "reports.show" report
+      = report.title

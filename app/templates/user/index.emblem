@@ -1,0 +1,4 @@
+if Grug.Session.authed
+  b.item = Grug.Session.user.displayName
+unless Grug.Session.authed
+  a.item{action "login"} login

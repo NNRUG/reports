@@ -1,0 +1,6 @@
+.ui.transparent.inverted.main.menu
+  link-to 'reports.index' class="item" | Доклады
+  link-to 'reports.new' class="item" | Предложить
+  render 'user.index'
+
+div == outlet

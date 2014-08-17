@@ -1,0 +1,28 @@
+.ui.form
+  .inline.field: .ui.checkbox
+    input type="checkbox" checked=needAuthor
+    label Ищется автор
+
+  script $('.ui.checkbox').checkbox()
+
+  unless needAuthor
+    .field
+      label Представьтесь пожалуйста
+      .ui.left.labeled.icon.input
+        input type="text" value=author placeholder="Имя"
+        i.user.icon
+        .ui.corner.label: i.icon.asterisk
+
+  .field
+    label О чем ваш доклад
+    .ui.left.labeled.icon.input
+      input type="text" value=title placeholder="Название доклада"
+      i.font.icon
+      .ui.corner.label: i.icon.asterisk
+
+  .field
+    label Короткое описание, если есть
+    .ui.left.labeled.icon.input
+      textarea value=description placeholder="Описание"
+
+  .ui.blue.submit.button{action "create"} Создать
