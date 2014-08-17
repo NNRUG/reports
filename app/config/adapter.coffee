@@ -1,2 +1,4 @@
+Grug.FirebaseRef = new Firebase "https://grrug.firebaseio.com/"
+
 Grug.ApplicationAdapter = DS.FirebaseAdapter.extend
-  firebase: new Firebase "https://grrug.firebaseio.com/"
+  firebase: Grug.FirebaseRef
