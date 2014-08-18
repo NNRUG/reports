@@ -3,6 +3,6 @@
   link-to 'reports.new' class="item" | Предложить
   render 'user.index'
 
-.two.column.doubling.center.aligned.ui.grid: .wide.column
+.two.column.doubling.center.aligned.ui.grid.segment: .wide.column
   .ui.form.grid.left.aligned: .wide.column
     == outlet
