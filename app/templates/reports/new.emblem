@@ -1,25 +1,17 @@
-unless needAuthor
-  .field
-    label Представьтесь пожалуйста
-    .ui.left.labeled.icon.input
-      input type="text" value=author placeholder="Имя"
-      i.user.icon
-      .ui.corner.label: i.icon.asterisk
-
 .field
   label О чем ваш доклад
   .ui.left.labeled.icon.input
-    input type="text" value=title placeholder="Название доклада"
+    view Ember.TextField valueBinding="title" type="text" placeholder="Название доклада"
     i.font.icon
     .ui.corner.label: i.icon.asterisk
 
 .field
   label Короткое описание, если есть
   .ui.left.labeled.icon.input
-    textarea value=description placeholder="Описание"
+    view Ember.TextArea valueBinding="description" placeholder="Описание"
 
 .inline.field: .ui.checkbox
-  input type="checkbox" checked=needAuthor
+  view Ember.Checkbox checkedBinding=needAuthor
   label Нужен автор
 
 script $('.ui.checkbox').checkbox()

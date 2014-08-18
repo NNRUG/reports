@@ -1,7 +1,8 @@
 .ui.transparent.inverted.main.menu
   link-to 'reports.index' class="item" | Доклады
   link-to 'reports.new' class="item" | Предложить
-  render 'user.index'
+  .right.menu
+    render 'user.index'
 
 .two.column.doubling.center.aligned.ui.grid.segment: .wide.column
   .ui.form.grid.left.aligned: .wide.column

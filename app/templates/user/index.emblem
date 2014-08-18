@@ -1,4 +1,15 @@
 if Grug.Session.authed
-  b.item = Grug.Session.user.displayName
+  ui-dropdown class="item"
+    .text = Grug.Session.user.displayName
+    i.icon.dropdown
+    .menu
+      a.item{action "logout"} Выйти
+
 unless Grug.Session.authed
-  a.item{action "login"} login
+  ui-dropdown class="item"
+    .text Войти
+    i.icon.dropdown
+    .menu
+      a.item{action "login" "facebook"} Facebook
+      a.item{action "login" "google"} Google
+      a.item{action "login" "github"} GitHub

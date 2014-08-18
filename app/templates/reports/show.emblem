@@ -1,7 +1,10 @@
 .ui.message
   h1.ui.header: .content
     = title
-    .sub.header by {{author}}
+    if needAuthor
+      .sub.header Автор не найден
+    unless needAuthor
+      .sub.header by {{author.displayName}}
   p = description
 
 .ui.piled.blue.segment

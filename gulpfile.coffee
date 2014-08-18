@@ -7,6 +7,9 @@ serve = require "gulp-serve"
 plumber = require "gulp-plumber"
 notify = require "gulp-notify"
 gulpif = require "gulp-if"
+replace = require "gulp-replace"
+
+env = process.env.GULP_ENV
 
 plumberCfg = errorHandler: (error) ->
   console.log error
@@ -39,6 +42,7 @@ gulp.task "scripts", ->
   gulp.src paths.scripts.src
   .pipe plumber plumberCfg
   .pipe coffee bare: true
+  .pipe replace "_ENV_", env
   .pipe concat paths.scripts.filename
   .pipe gulp.dest paths.scripts.dest
 

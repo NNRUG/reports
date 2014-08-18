@@ -23,13 +23,14 @@ $ git clone git@github.com:NNRUG/reports.git
 $ cd reports
 $ npm install -g gulp
 $ npm install
-$ gulp dist
+$ GULP_ENV=production gulp dist
 ```
 
 ### Start
 
+Желательно вместо `dev` указать назавние которое будет уникально, иначе возможно пересечение с теми кто использует такое же название
+
 ```bash
-$ gulp
+$ GULP_ENV=dev gulp
 $ open localhost:8080
 ```
-

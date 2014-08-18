@@ -6,6 +6,9 @@
           = link-to "reports.show" report class="header"
             = report.title
           |&nbsp;
-          small by {{report.author}}
+          if needAuthor
+            small Автор не найден
+          unless needAuthor
+            small by {{report.author.displayName}}
         .description
           p = report.description
