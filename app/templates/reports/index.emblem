@@ -1,6 +1,11 @@
-each report in arrangedContent
-  .ui.segment
-    b = report.author
-    | &nbsp;
-    link-to "reports.show" report
-      = report.title
+.ui.stacked.feed.segment
+  each report in arrangedContent
+    .item
+      .content
+        h3
+          = link-to "reports.show" report class="header"
+            = report.title
+          |&nbsp;
+          small by {{report.author}}
+        .description
+          p = report.description
